@@ -1,5 +1,6 @@
 "use client";
 import { Box, Card, CardMedia, Grid, Typography } from "@mui/material";
+import Divider from "./Divider";
 
 export default function Header() {
   return (
@@ -57,6 +58,7 @@ export default function Header() {
           />
         </Card>
       </Grid>
+      <Divider />
     </Grid>
   );
 }
