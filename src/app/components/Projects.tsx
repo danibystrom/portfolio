@@ -1,6 +1,14 @@
 "use client";
-import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  Typography,
+} from "@mui/material";
 import { projects } from "../data/projects";
+import Divider from "./Divider";
 
 export default function Projects() {
   return (
@@ -55,6 +63,24 @@ export default function Projects() {
           </Card>
         </Grid>
       ))}
+      <Button
+        variant="outlined"
+        sx={{
+          color: "#0A0908",
+          borderColor: "#0A0908",
+          borderRadius: 20,
+          mt: 10,
+          "&:hover": {
+            backgroundColor: "#0A0908",
+            color: "#F3F1EA",
+          },
+        }}
+      >
+        <Typography variant="button" sx={{ paddingX: "32px" }}>
+          VIEW ALL
+        </Typography>
+      </Button>
+      <Divider />
     </Grid>
   );
 }

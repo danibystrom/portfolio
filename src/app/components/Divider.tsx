@@ -8,7 +8,7 @@ export default function Divider() {
         sx={{
           marginY: 10,
           marginX: 3,
-          borderColor: "#000000",
+          borderColor: "#0A0908",
           height: 2,
         }}
       />
