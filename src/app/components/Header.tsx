@@ -52,7 +52,7 @@ export default function Header() {
         >
           <CardMedia
             component="img"
-            image="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            image="https://artdirected.design/cdn/shop/files/ARTD-C04-Device-041-3.png?v=1686184582"
             alt="Beskrivning av bilden"
             sx={{ objectFit: "contain", height: "auto", width: "100%" }}
           />
