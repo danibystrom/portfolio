@@ -1,11 +1,12 @@
 "use client";
 import { AddSharp, RemoveSharp } from "@mui/icons-material";
-import { Grid } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import Divider from "./Divider";
 import DividerSmall from "./DividerSmall";
 
 export default function ControlledAccordions() {
@@ -69,10 +70,20 @@ export default function ControlledAccordions() {
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>
-            General settings
+          <Typography
+            variant="h5"
+            component="h2"
+            sx={{
+              width: "33%",
+              flexShrink: 0,
+              fontWeight: 700,
+            }}
+          >
+            DEVELOPER INTERN
           </Typography>
-          <Typography sx={{ color: "#0A0908" }}>I am an accordion</Typography>
+          <Typography sx={{ color: "#0A0908" }}>
+            Filtering has been entirely disabled for whole web server
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -127,9 +138,19 @@ export default function ControlledAccordions() {
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
-          <Typography sx={{ width: "33%", flexShrink: 0 }}>Users</Typography>
+          <Typography
+            variant="h5"
+            component="h2"
+            sx={{
+              width: "33%",
+              flexShrink: 0,
+              fontWeight: 700,
+            }}
+          >
+            WEBSITE ADMINISTRATOR
+          </Typography>
           <Typography sx={{ color: "#0A0908" }}>
-            You are currently not an owner
+            Filtering has been entirely disabled for whole web server
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -187,8 +208,16 @@ export default function ControlledAccordions() {
           id="panel3bh-header"
           sx={{ color: "#0A0908" }}
         >
-          <Typography sx={{ width: "33%", flexShrink: 0, color: "#0A0908" }}>
-            Advanced settings
+          <Typography
+            variant="h5"
+            component="h2"
+            sx={{
+              width: "33%",
+              flexShrink: 0,
+              fontWeight: 700,
+            }}
+          >
+            WEBSITE ADMINISTRATOR
           </Typography>
           <Typography sx={{ color: "#0A0908" }}>
             Filtering has been entirely disabled for whole web server
@@ -247,8 +276,19 @@ export default function ControlledAccordions() {
           aria-controls="panel4bh-content"
           id="panel4bh-header"
         >
-          <Typography sx={{ width: "33%", flexShrink: 0, color: "#0A0908" }}>
-            Personal data
+          <Typography
+            variant="h5"
+            component="h2"
+            sx={{
+              width: "33%",
+              flexShrink: 0,
+              fontWeight: 700,
+            }}
+          >
+            WEBSITE SPECIALIST
+          </Typography>
+          <Typography sx={{ color: "#0A0908" }}>
+            Filtering has been entirely disabled for whole web server
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -259,6 +299,32 @@ export default function ControlledAccordions() {
         </AccordionDetails>
       </Accordion>
       <DividerSmall />
+      <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          variant="outlined"
+          sx={{
+            color: "#0A0908",
+            borderColor: "#0A0908",
+            borderRadius: 20,
+            mt: 10,
+            "&:hover": {
+              backgroundColor: "#0A0908",
+              color: "#F3F1EA",
+            },
+          }}
+        >
+          <Typography
+            variant="button"
+            sx={{
+              paddingX: "32px",
+            }}
+          >
+            CONTACT ME
+          </Typography>
+        </Button>
+      </Grid>
+
+      <Divider />
     </Grid>
   );
 }
