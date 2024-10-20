@@ -6,7 +6,7 @@ export default function Divider() {
     <Grid item xs={12}>
       <MuiDivider
         sx={{
-          marginY: 10,
+          marginY: 0,
           marginX: 1,
           borderColor: "#0A0908",
           height: 2,
