@@ -48,7 +48,7 @@ export default function Projects() {
               alt={project.title}
               image={project.image}
               sx={{
-                height: "600px",
+                height: "auto",
                 width: "100%",
                 objectFit: "cover",
                 objectPosition: "center",
