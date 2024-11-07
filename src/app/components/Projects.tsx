@@ -80,13 +80,20 @@ export default function Projects() {
             borderColor: "#0A0908",
             borderRadius: 20,
             mt: 10,
+            transition: "all 0.3s ease",
             "&:hover": {
-              backgroundColor: "#0A0908",
-              color: "#F3F1EA",
+              boxShadow: "8px 8px #e9e5d8",
+              transition: "all 0.3s ease",
+              backgroundColor: "#FFFFFF",
             },
           }}
         >
-          <Typography variant="body1" sx={{ paddingX: "32px" }}>
+          <Typography
+            variant="body1"
+            sx={{
+              paddingX: "32px",
+            }}
+          >
             VIEW ALL
           </Typography>
         </Button>

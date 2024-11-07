@@ -7,7 +7,6 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import theme from "../themes/theme";
-import Divider from "./Divider";
 import DividerSmall from "./DividerSmall";
 
 export default function ControlledAccordions() {
@@ -24,7 +23,12 @@ export default function ControlledAccordions() {
         <Typography
           variant="h2"
           component="h2"
-          sx={{ marginBottom: 6, color: "#0A0908", fontSize: "2.2rem" }}
+          sx={{
+            marginBottom: 6,
+            color: "#0A0908",
+            fontSize: "2.2rem",
+            marginX: 1,
+          }}
         >
           WHAT I'VE DONE
         </Typography>
@@ -77,7 +81,7 @@ export default function ControlledAccordions() {
               variant="h5"
               component="h5"
               sx={{
-                width: "33%",
+                width: "50%",
                 flexShrink: 0,
                 fontWeight: 700,
               }}
@@ -85,7 +89,7 @@ export default function ControlledAccordions() {
               DEVELOPER INTERN
             </Typography>
             <Typography sx={{ color: "#0A0908" }}>
-              Filtering has been entirely disabled for whole web server
+              Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -145,7 +149,7 @@ export default function ControlledAccordions() {
               variant="h5"
               component="h5"
               sx={{
-                width: "33%",
+                width: "50%",
                 flexShrink: 0,
                 fontWeight: 700,
               }}
@@ -153,7 +157,7 @@ export default function ControlledAccordions() {
               WEBSITE ADMINISTRATOR
             </Typography>
             <Typography sx={{ color: "#0A0908" }}>
-              Filtering has been entirely disabled for whole web server
+              Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -215,7 +219,7 @@ export default function ControlledAccordions() {
               variant="h5"
               component="h5"
               sx={{
-                width: "33%",
+                width: "50%",
                 flexShrink: 0,
                 fontWeight: 700,
               }}
@@ -223,7 +227,7 @@ export default function ControlledAccordions() {
               WEBSITE ADMINISTRATOR
             </Typography>
             <Typography sx={{ color: "#0A0908" }}>
-              Filtering has been entirely disabled for whole web server
+              Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -283,7 +287,7 @@ export default function ControlledAccordions() {
               variant="h5"
               component="h5"
               sx={{
-                width: "33%",
+                width: "50%",
                 flexShrink: 0,
                 fontWeight: 700,
               }}
@@ -291,7 +295,7 @@ export default function ControlledAccordions() {
               WEBSITE SPECIALIST
             </Typography>
             <Typography sx={{ color: "#0A0908" }}>
-              Filtering has been entirely disabled for whole web server
+              Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -310,9 +314,12 @@ export default function ControlledAccordions() {
               borderColor: "#0A0908",
               borderRadius: 20,
               mt: 10,
+              m: 10,
+              transition: "all 0.3s ease",
               "&:hover": {
-                backgroundColor: "#0A0908",
-                color: "#F3F1EA",
+                boxShadow: "8px 8px #e9e5d8",
+                transition: "all 0.3s ease",
+                backgroundColor: "#FFFFFF",
               },
             }}
           >
@@ -326,8 +333,6 @@ export default function ControlledAccordions() {
             </Typography>
           </Button>
         </Grid>
-
-        <Divider />
       </Grid>
     </ThemeProvider>
   );

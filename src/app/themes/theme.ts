@@ -11,19 +11,19 @@ export const theme = createTheme({
       color: "#0A0908",
     },
     h2: {
-      fontFamily: '"DM Serif Display", serif;',
+      fontFamily: '"Roboto", sans-serif;',
       fontWeight: 600,
       fontSize: "2rem",
       color: "#550A09085",
     },
     h5: {
-      fontFamily: '"Roboto", sans-serif',
+      fontFamily: '"Roboto", sans-serif;',
       fontWeight: 600,
       fontSize: "1.5rem",
       color: "#0A0908",
     },
     body1: {
-      fontFamily: '"Roboto", sans-serif',
+      fontFamily: '"Roboto", sans-serif;',
       fontSize: "1rem",
       color: "#0A0908",
     },

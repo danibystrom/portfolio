@@ -28,7 +28,6 @@ export default function Header() {
               }}
             >
               From Norrland's forests to a visionary web developer
-              {/* FROM NORRLAND'S FORESTS TO A VISIONARY WEB DEVELOPER */}
             </Typography>
           </Box>
         </Grid>
