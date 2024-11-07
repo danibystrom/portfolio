@@ -30,7 +30,7 @@ export default function ControlledAccordions() {
             marginX: 1,
           }}
         >
-          WHAT I'VE DONE
+          WHAT IVE DONE
         </Typography>
         <DividerSmall />
         <Accordion

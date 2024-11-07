@@ -27,7 +27,7 @@ export default function Header() {
                 color: "#0A0908",
               }}
             >
-              From Norrland's forests to a visionary web developer
+              From Norrlands forests to a visionary web developer
             </Typography>
           </Box>
         </Grid>
