@@ -27,6 +27,7 @@ export const projects: Project[] = [
     pageTitle: "Ananas.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc ligula, nec consectetur risus scelerisque et. Aenean feugiat massa",
+    video: "/ananas-video.mp4",
   },
   {
     id: 3,
@@ -36,6 +37,7 @@ export const projects: Project[] = [
     pageTitle: "Milk Mayham",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc ligula, nec consectetur risus scelerisque et. Aenean feugiat massa",
+    video: "/milkmayham-video.mp4",
   },
   {
     id: 4,

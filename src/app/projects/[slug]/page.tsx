@@ -13,7 +13,12 @@ import {
 } from "@mui/material";
 import { useEffect, useRef, useState } from "react";
 
-export default function VideoContainer() {
+type PageProps = { params: { slug: string } };
+
+export default function VideoContainer({ params }: PageProps) {
+  const { slug: urlslug } = params;
+  const slug = decodeURIComponent(urlslug);
+  const project = projects.find((project) => project.slug.toString() === slug);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
@@ -50,6 +55,10 @@ export default function VideoContainer() {
     }
   };
 
+  if (!project) {
+    return <div>Project not found</div>;
+  }
+
   return (
     <Grid>
       <Box
@@ -63,7 +72,7 @@ export default function VideoContainer() {
         <CardMedia
           ref={videoRef}
           component="video"
-          src={projects[0].video}
+          src={project.video}
           style={{
             width: "100vw",
             height: "100%",
