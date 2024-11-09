@@ -34,7 +34,7 @@ export const projects: Project[] = [
     title: "MILK MAYHAM",
     image: "/milkmayham-mockup.jpg",
     slug: "milk-mayham.",
-    pageTitle: "Milk Mayham",
+    pageTitle: "Milk Mayham.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc ligula, nec consectetur risus scelerisque et. Aenean feugiat massa",
     video: "/milkmayham-video.mp4",
@@ -47,5 +47,6 @@ export const projects: Project[] = [
     pageTitle: "Ciliegia.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc ligula, nec consectetur risus scelerisque et. Aenean feugiat massa",
+    video: "/ciliegia-video.mp4",
   },
 ];

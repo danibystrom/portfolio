@@ -316,6 +316,7 @@ export default function ControlledAccordions() {
               mt: 10,
               m: 10,
               transition: "all 0.3s ease",
+              width: 280,
               "&:hover": {
                 boxShadow: "8px 8px #e9e5d8",
                 transition: "all 0.3s ease",
@@ -326,10 +327,10 @@ export default function ControlledAccordions() {
             <Typography
               variant="body1"
               sx={{
-                paddingX: "32px",
+                paddingX: "25px",
               }}
             >
-              CONTACT ME
+              STALK MY LINKEDIN
             </Typography>
           </Button>
         </Grid>

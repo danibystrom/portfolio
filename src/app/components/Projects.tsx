@@ -87,6 +87,7 @@ export default function Projects() {
             borderRadius: 20,
             mt: 10,
             transition: "all 0.3s ease",
+            width: 280,
             "&:hover": {
               boxShadow: "8px 8px #e9e5d8",
               transition: "all 0.3s ease",
@@ -97,12 +98,13 @@ export default function Projects() {
           <Typography
             variant="body1"
             sx={{
-              paddingX: "32px",
+              paddingX: "25px",
             }}
           >
-            VIEW ALL
+            CHECK OUT MY REPOS
           </Typography>
         </Button>
+
         <Divider />
       </Grid>
     </ThemeProvider>

@@ -61,6 +61,23 @@ export default function VideoContainer({ params }: PageProps) {
 
   return (
     <Grid>
+      <Grid item xs={12} md={10} sx={{ zIndex: 1, padding: 4 }}>
+        <Box sx={{ mt: 6 }}>
+          <Typography
+            variant="h2"
+            component="h1"
+            sx={{
+              fontFamily: '"DM Serif Display", serif',
+              fontWeight: 700,
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
+              lineHeight: 1,
+              color: "#0A0908",
+            }}
+          >
+            {project.pageTitle}
+          </Typography>
+        </Box>
+      </Grid>
       <Box
         sx={{
           opacity: isLoaded ? 1 : 0,
