@@ -26,16 +26,49 @@ export default function Footer() {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <Typography variant="h1" fontWeight="bold">
-            SINCERLY,
+          <Typography
+            variant="h2"
+            component="h1"
+            fontWeight="bold"
+            sx={{
+              fontFamily: '"DM Serif Display", serif',
+              fontWeight: 700,
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
+              lineHeight: 1,
+              color: "#fff",
+            }}
+          >
+            Sincerly,
           </Typography>
         </Box>
         <Box sx={{ textAlign: "right" }}>
-          <Typography variant="h1" fontWeight="bold">
-            DANIELA
+          <Typography
+            variant="h2"
+            component="h1"
+            fontWeight="bold"
+            sx={{
+              fontFamily: '"DM Serif Display", serif',
+              fontWeight: 700,
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
+              lineHeight: 1,
+              color: "#fff",
+            }}
+          >
+            Daniela
           </Typography>
-          <Typography variant="h1" fontWeight="bold">
-            BYSTRÖM
+          <Typography
+            variant="h2"
+            component="h1"
+            fontWeight="bold"
+            sx={{
+              fontFamily: '"DM Serif Display", serif',
+              fontWeight: 700,
+              fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
+              lineHeight: 1,
+              color: "#fff",
+            }}
+          >
+            Byström
           </Typography>
         </Box>
       </Box>
@@ -49,10 +82,10 @@ export default function Footer() {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <Typography fontWeight="bold">ABOUT</Typography>
-          <Typography fontWeight="bold">PROJECTS</Typography>
-          <Typography fontWeight="bold">WORK</Typography>
-          <Typography fontWeight="bold">CONTACT</Typography>
+          <Typography>ABOUT</Typography>
+          <Typography>PROJECTS</Typography>
+          <Typography>WORK</Typography>
+          <Typography>CONTACT</Typography>
         </Box>
         <Box
           sx={{
@@ -64,10 +97,10 @@ export default function Footer() {
           }}
         >
           <Link href="https://github.com" color="inherit" underline="hover">
-            <Typography fontWeight="bold">GITHUB</Typography>
+            <Typography>GITHUB</Typography>
           </Link>
           <Link href="https://linkedin.com" color="inherit" underline="hover">
-            <Typography fontWeight="bold">LINKEDIN</Typography>
+            <Typography>LINKEDIN</Typography>
           </Link>
         </Box>
       </Box>

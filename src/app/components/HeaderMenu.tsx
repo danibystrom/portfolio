@@ -1,5 +1,12 @@
 "use client";
-import { AppBar, Box, Button, ThemeProvider, Toolbar } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  ThemeProvider,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import theme from "../themes/theme";
 
 export default function Header() {
@@ -21,7 +28,9 @@ export default function Header() {
                 },
               }}
             >
-              ABOUT
+              <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                Welcome
+              </Typography>
             </Button>
             <Button
               color="inherit"
@@ -33,7 +42,9 @@ export default function Header() {
                 },
               }}
             >
-              PROJECTS
+              <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                PROJECTS
+              </Typography>
             </Button>
             <Button
               color="inherit"
@@ -45,19 +56,22 @@ export default function Header() {
                 },
               }}
             >
-              WORK
+              <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                WORK
+              </Typography>
             </Button>
             <Button
               color="inherit"
               sx={{
                 color: "#0A0908",
-                fontSize: "3vh",
                 "&:hover": {
                   backgroundColor: "transparent",
                 },
               }}
             >
-              CONTACT
+              <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                CONTACT
+              </Typography>
             </Button>
           </Toolbar>
         </AppBar>

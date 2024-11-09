@@ -5,6 +5,7 @@ import {
   CardContent,
   CardMedia,
   Grid,
+  Link,
   ThemeProvider,
   Typography,
 } from "@mui/material";
@@ -36,41 +37,46 @@ export default function Projects() {
               justifyContent: "center",
             }}
           >
-            <Card
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                width: "100%",
-                boxShadow: "none",
-                backgroundColor: "transparent",
-                borderRadius: 0,
-              }}
+            <Link
+              href={`/projects/${project.slug}`}
+              style={{ textDecoration: "none" }}
             >
-              <CardMedia
-                component="img"
-                alt={project.title}
-                image={project.image}
+              <Card
                 sx={{
-                  height: "auto",
+                  display: "flex",
+                  flexDirection: "column",
                   width: "100%",
-                  objectFit: "cover",
-                  objectPosition: "center",
-                  borderRadius: 10,
+                  boxShadow: "none",
+                  backgroundColor: "transparent",
+                  borderRadius: 0,
                 }}
-              />
-              <CardContent>
-                <Typography
-                  variant="h2"
-                  component="h2"
+              >
+                <CardMedia
+                  component="img"
+                  alt={project.title}
+                  image={project.image}
                   sx={{
-                    fontWeight: 700,
-                    fontSize: { xs: "1.5rem", md: "2rem" },
+                    height: "auto",
+                    width: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center",
+                    borderRadius: 10,
                   }}
-                >
-                  {project.title}
-                </Typography>
-              </CardContent>
-            </Card>
+                />
+                <CardContent>
+                  <Typography
+                    variant="h2"
+                    component="h2"
+                    sx={{
+                      fontWeight: 700,
+                      fontSize: { xs: "1.5rem", md: "2rem" },
+                    }}
+                  >
+                    {project.title}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Link>
           </Grid>
         ))}
         <Button
