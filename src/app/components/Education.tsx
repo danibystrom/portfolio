@@ -6,7 +6,7 @@ import Divider from "./Divider";
 export default function EducationSection() {
   return (
     <ThemeProvider theme={theme}>
-      <Grid container sx={{ height: "auto" }}>
+      <Grid container sx={{ height: "auto", backgroundColor: "#f3f1ea" }}>
         <Grid container spacing={4} sx={{ padding: 4 }}>
           <Grid
             container

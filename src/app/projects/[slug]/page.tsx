@@ -60,7 +60,7 @@ export default function VideoContainer({ params }: PageProps) {
   }
 
   return (
-    <Grid>
+    <Grid sx={{ backgroundColor: "#f3f1ea" }}>
       <Grid item xs={12} md={10} sx={{ zIndex: 1, padding: 4 }}>
         <Box sx={{ mt: 6 }}>
           <Typography
@@ -84,6 +84,12 @@ export default function VideoContainer({ params }: PageProps) {
           transition: "opacity 1s ease",
           height: "100vh",
           position: "relative",
+          overflow: "hidden",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: 10,
+          boxShadow: "0px 4px 10px rgba(226, 220, 203)",
         }}
       >
         <CardMedia
@@ -91,9 +97,10 @@ export default function VideoContainer({ params }: PageProps) {
           component="video"
           src={project.video}
           style={{
-            width: "100vw",
-            height: "100%",
-            objectFit: "cover",
+            width: "98vw",
+            height: "auto",
+            objectFit: "fill",
+            backgroundColor: "#f3f1ea",
           }}
         />
         <IconButton
@@ -167,24 +174,24 @@ export default function VideoContainer({ params }: PageProps) {
               color: "#0A0908",
               borderColor: "#0A0908",
               marginY: 10,
-
               borderRadius: 20,
               mt: 10,
               transition: "all 0.3s ease",
+              width: 280,
               "&:hover": {
-                boxShadow: "8px 8px #e9e5d8",
+                boxShadow: "8px 8px #e2dccb",
                 transition: "all 0.3s ease",
-                backgroundColor: "#FFFFFF",
+                backgroundColor: "#f3f1ea",
               },
             }}
           >
             <Typography
               variant="body1"
               sx={{
-                paddingX: "32px",
+                paddingX: "25px",
               }}
             >
-              VIEW REPO
+              VIEW MY REPO
             </Typography>
           </Button>{" "}
         </Grid>

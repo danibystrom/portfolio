@@ -23,6 +23,7 @@ export default function Projects() {
           maxWidth: "100%",
           display: "flex",
           justifyContent: "center",
+          backgroundColor: "#f3f1ea",
         }}
       >
         {projects.map((project) => (
@@ -89,9 +90,9 @@ export default function Projects() {
             transition: "all 0.3s ease",
             width: 280,
             "&:hover": {
-              boxShadow: "8px 8px #e9e5d8",
+              boxShadow: "8px 8px #e2dccb",
               transition: "all 0.3s ease",
-              backgroundColor: "#FFFFFF",
+              backgroundColor: "#f3f1ea",
             },
           }}
         >

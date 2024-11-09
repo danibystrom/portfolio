@@ -13,7 +13,7 @@ import Divider from "./Divider";
 export default function Header() {
   return (
     <ThemeProvider theme={theme}>
-      <Grid container sx={{ height: "auto" }}>
+      <Grid container sx={{ height: "auto", backgroundColor: "#f3f1ea" }}>
         <Grid item xs={12} md={10} sx={{ zIndex: 1, padding: 4 }}>
           <Box sx={{ mt: 6 }}>
             <Typography

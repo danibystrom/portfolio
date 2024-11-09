@@ -15,7 +15,7 @@ export default function Header() {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           position="static"
-          sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+          sx={{ backgroundColor: "#f3f1ea", boxShadow: "none" }}
         >
           <Toolbar sx={{ justifyContent: "space-between" }}>
             <Button

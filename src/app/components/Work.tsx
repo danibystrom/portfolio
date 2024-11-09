@@ -19,7 +19,7 @@ export default function ControlledAccordions() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid item xs={12}>
+      <Grid item xs={12} sx={{ backgroundColor: "#f3f1ea" }}>
         <Typography
           variant="h2"
           component="h2"
@@ -45,6 +45,7 @@ export default function ControlledAccordions() {
           }}
         >
           <AccordionSummary
+            sx={{ backgroundColor: "#f3f1ea" }}
             expandIcon={
               expanded === "panel1" ? (
                 <RemoveSharp
@@ -92,7 +93,7 @@ export default function ControlledAccordions() {
               Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
             <Typography>
               Nulla facilisi. Phasellus sollicitudin nulla et quam mattis
               feugiat. Aliquam eget maximus est, id dignissim quam.
@@ -113,6 +114,7 @@ export default function ControlledAccordions() {
           }}
         >
           <AccordionSummary
+            sx={{ backgroundColor: "#f3f1ea" }}
             expandIcon={
               expanded === "panel2" ? (
                 <RemoveSharp
@@ -160,7 +162,7 @@ export default function ControlledAccordions() {
               Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
             <Typography>
               Donec placerat, lectus sed mattis semper, neque lectus feugiat
               lectus, varius pulvinar diam eros in elit. Pellentesque convallis
@@ -182,6 +184,7 @@ export default function ControlledAccordions() {
           }}
         >
           <AccordionSummary
+            sx={{ backgroundColor: "#f3f1ea", color: "#0A0908" }}
             expandIcon={
               expanded === "panel3" ? (
                 <RemoveSharp
@@ -213,7 +216,6 @@ export default function ControlledAccordions() {
             }
             aria-controls="panel3bh-content"
             id="panel3bh-header"
-            sx={{ color: "#0A0908" }}
           >
             <Typography
               variant="h5"
@@ -230,7 +232,7 @@ export default function ControlledAccordions() {
               Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
             <Typography>
               Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
               sit amet egestas eros, vitae egestas augue. Duis vel est augue.
@@ -251,6 +253,7 @@ export default function ControlledAccordions() {
           }}
         >
           <AccordionSummary
+            sx={{ backgroundColor: "#f3f1ea" }}
             expandIcon={
               expanded === "panel4" ? (
                 <RemoveSharp
@@ -298,7 +301,7 @@ export default function ControlledAccordions() {
               Lorem ipsum, 2023 - 2023
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
             <Typography>
               Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer
               sit amet egestas eros, vitae egestas augue. Duis vel est augue.
@@ -318,9 +321,9 @@ export default function ControlledAccordions() {
               transition: "all 0.3s ease",
               width: 280,
               "&:hover": {
-                boxShadow: "8px 8px #e9e5d8",
+                boxShadow: "8px 8px #e2dccb",
                 transition: "all 0.3s ease",
-                backgroundColor: "#FFFFFF",
+                backgroundColor: "#f3f1ea",
               },
             }}
           >
