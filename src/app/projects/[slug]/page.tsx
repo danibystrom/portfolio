@@ -1,6 +1,8 @@
 "use client";
 import Divider from "@/app/components/Divider";
 import { projects } from "@/app/data/projects";
+import theme from "@/app/themes/theme";
+import { ThemeProvider } from "@emotion/react";
 import PauseIcon from "@mui/icons-material/Pause";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import {
@@ -60,142 +62,157 @@ export default function VideoContainer({ params }: PageProps) {
   }
 
   return (
-    <Grid sx={{ backgroundColor: "#f3f1ea" }}>
-      <Grid item xs={12} md={10} sx={{ zIndex: 1, padding: 4 }}>
-        <Box sx={{ mt: 6 }}>
-          <Typography
-            variant="h2"
-            component="h1"
-            sx={{
-              fontFamily: '"DM Serif Display", serif',
-              fontWeight: 700,
-              fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
-              lineHeight: 1,
-              color: "#0A0908",
-            }}
-          >
-            {project.pageTitle}
-          </Typography>
-        </Box>
-      </Grid>
-      <Box
-        sx={{
-          opacity: isLoaded ? 1 : 0,
-          transition: "opacity 1s ease",
-          height: "100vh",
-          position: "relative",
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          borderRadius: 10,
-          boxShadow: "0px 4px 10px rgba(226, 220, 203)",
-        }}
-      >
-        <CardMedia
-          ref={videoRef}
-          component="video"
-          src={project.video}
-          style={{
-            width: "98vw",
-            height: "auto",
-            objectFit: "fill",
-            backgroundColor: "#f3f1ea",
-          }}
-        />
-        <IconButton
-          sx={{
-            position: "absolute",
-            bottom: 10,
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 2,
-          }}
-          onClick={handleTogglePlay}
-        >
-          {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
-        </IconButton>
-      </Box>
-      <Divider />
-      <Grid container sx={{ height: "auto" }}>
-        <Grid container spacing={4} sx={{ padding: 4 }}>
-          <Grid
-            container
-            item
-            xs={12}
-            justifyContent="space-between"
-            alignItems="flex-start"
-          >
-            <Grid item xs={12} md={3}>
-              <Typography
-                variant="h2"
-                component="h2"
-                sx={{
-                  fontWeight: 700,
-                  fontSize: { xs: "1.5rem", md: "2rem" },
-                }}
-              >
-                ABOUT THE PROJECT
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={8} sx={{ textAlign: "right" }}>
-              <Box sx={{ maxWidth: "100%" }}>
-                <Typography
-                  variant="body1"
-                  sx={{
-                    fontSize: { xs: "1rem", md: "1.25rem" },
-                    lineHeight: 1.5,
-                  }}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc
-                  ligula, nec consectetur risus scelerisque et. Aenean feugiat
-                  massa nec laoreet congue. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Nullam pharetra laoreet rhoncus.
-                  Maecenas consectetur nunc ligula, nec consectetur risus
-                  scelerisque et. Aenean feugiat massa nec laoreet congue.
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          spacing={2}
-          sx={{
-            maxWidth: "100%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#0A0908",
-              borderColor: "#0A0908",
-              marginY: 10,
-              borderRadius: 20,
-              mt: 10,
-              transition: "all 0.3s ease",
-              width: 280,
-              "&:hover": {
-                boxShadow: "8px 8px #e2dccb",
-                transition: "all 0.3s ease",
-                backgroundColor: "#f3f1ea",
-              },
-            }}
-          >
+    <ThemeProvider theme={theme}>
+      <Grid sx={{ backgroundColor: "#f3f1ea" }}>
+        <Grid item xs={12} md={9} sx={{ zIndex: 1, padding: 2 }}>
+          <Box sx={{ mt: 6 }}>
+            <Typography
+              variant="h2"
+              component="h1"
+              sx={{
+                fontFamily: '"DM Serif Display", serif',
+                fontWeight: 700,
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
+                lineHeight: 1,
+                color: "#0A0908",
+              }}
+            >
+              {project.pageTitle}
+            </Typography>
+          </Box>
+          <Box sx={{ mt: 6 }}>
             <Typography
               variant="body1"
               sx={{
-                paddingX: "25px",
+                fontSize: { xs: "1rem", sm: "1.25rem" },
+                lineHeight: 1.5,
               }}
             >
-              VIEW MY REPO
+              {project.pageSubtitle}
             </Typography>
-          </Button>{" "}
+          </Box>
+        </Grid>
+        <Box
+          sx={{
+            opacity: isLoaded ? 1 : 0,
+            transition: "opacity 1s ease",
+            height: "100vh",
+            position: "relative",
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            // borderRadius: 10,
+            margin: 2,
+            boxShadow: "0px 4px 10px rgba(226, 220, 203)",
+          }}
+        >
+          <CardMedia
+            ref={videoRef}
+            component="video"
+            src={project.video}
+            style={{
+              width: "98vw",
+              height: "auto",
+              objectFit: "cover",
+              backgroundColor: "#f3f1ea",
+            }}
+          />
+          <IconButton
+            sx={{
+              position: "absolute",
+              bottom: 10,
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 2,
+            }}
+            onClick={handleTogglePlay}
+          >
+            {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
+          </IconButton>
+        </Box>
+        <Divider />
+        <Grid container sx={{ height: "auto" }}>
+          <Grid container spacing={4} sx={{ padding: 4 }}>
+            <Grid
+              container
+              item
+              xs={12}
+              justifyContent="space-between"
+              alignItems="flex-start"
+            >
+              <Grid item xs={12} md={3}>
+                <Typography
+                  variant="h2"
+                  component="h2"
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: { xs: "1.5rem", md: "2rem" },
+                  }}
+                >
+                  ABOUT THE PROJECT
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={8} sx={{ textAlign: "right" }}>
+                <Box sx={{ maxWidth: "100%" }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontSize: { xs: "1rem", md: "1.25rem" },
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc
+                    ligula, nec consectetur risus scelerisque et. Aenean feugiat
+                    massa nec laoreet congue. Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Nullam pharetra laoreet
+                    rhoncus. Maecenas consectetur nunc ligula, nec consectetur
+                    risus scelerisque et. Aenean feugiat massa nec laoreet
+                    congue.
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+          </Grid>
+          <Grid
+            container
+            spacing={2}
+            sx={{
+              maxWidth: "100%",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Button
+              variant="outlined"
+              sx={{
+                color: "#0A0908",
+                borderColor: "#0A0908",
+                marginY: 10,
+                borderRadius: 20,
+                mt: 10,
+                transition: "all 0.3s ease",
+                width: 280,
+                "&:hover": {
+                  boxShadow: "8px 8px #e2dccb",
+                  transition: "all 0.3s ease",
+                  backgroundColor: "#f3f1ea",
+                },
+              }}
+            >
+              <Typography
+                variant="body1"
+                sx={{
+                  paddingX: "25px",
+                }}
+              >
+                VIEW MY REPO
+              </Typography>
+            </Button>{" "}
+          </Grid>
         </Grid>
       </Grid>
-    </Grid>
+    </ThemeProvider>
   );
 }
