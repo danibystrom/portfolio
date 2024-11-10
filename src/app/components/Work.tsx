@@ -57,7 +57,7 @@ export default function ControlledAccordions() {
             <AccordionSummary
               sx={{ backgroundColor: "#f3f1ea" }}
               expandIcon={
-                expanded === "panel1" ? (
+                expanded === "panel2" ? (
                   <RemoveSharp
                     sx={{
                       color: "#0A0908",
@@ -85,8 +85,8 @@ export default function ControlledAccordions() {
                   />
                 )
               }
-              aria-controls="panel1bh-content"
-              id="panel1bh-header"
+              aria-controls="panel2bh-content"
+              id="panel2bh-header"
             >
               <Typography
                 variant="h5"
@@ -99,7 +99,15 @@ export default function ControlledAccordions() {
               >
                 DEVELOPER INTERN
               </Typography>
-              <Typography sx={{ color: "#0A0908" }}>
+              <Typography
+                sx={{
+                  color: "#0A0908",
+                  display: {
+                    xs: expanded === "panel1" ? "block" : "none",
+                    sm: "block",
+                  },
+                }}
+              >
                 Lorem ipsum, 2023 - 2023
               </Typography>
             </AccordionSummary>
@@ -168,7 +176,15 @@ export default function ControlledAccordions() {
               >
                 WEBSITE ADMINISTRATOR
               </Typography>
-              <Typography sx={{ color: "#0A0908" }}>
+              <Typography
+                sx={{
+                  color: "#0A0908",
+                  display: {
+                    xs: expanded === "panel1" ? "block" : "none",
+                    sm: "block",
+                  },
+                }}
+              >
                 Lorem ipsum, 2023 - 2023
               </Typography>
             </AccordionSummary>
@@ -238,7 +254,15 @@ export default function ControlledAccordions() {
               >
                 WEBSITE ADMINISTRATOR
               </Typography>
-              <Typography sx={{ color: "#0A0908" }}>
+              <Typography
+                sx={{
+                  color: "#0A0908",
+                  display: {
+                    xs: expanded === "panel1" ? "block" : "none",
+                    sm: "block",
+                  },
+                }}
+              >
                 Lorem ipsum, 2023 - 2023
               </Typography>
             </AccordionSummary>
@@ -308,7 +332,15 @@ export default function ControlledAccordions() {
               >
                 WEBSITE SPECIALIST
               </Typography>
-              <Typography sx={{ color: "#0A0908" }}>
+              <Typography
+                sx={{
+                  color: "#0A0908",
+                  display: {
+                    xs: expanded === "panel1" ? "block" : "none",
+                    sm: "block",
+                  },
+                }}
+              >
                 Lorem ipsum, 2023 - 2023
               </Typography>
             </AccordionSummary>
