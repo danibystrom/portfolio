@@ -19,12 +19,21 @@ export default function EducationSection() {
               <Typography
                 variant="h2"
                 component="h2"
-                sx={{ fontWeight: 700, fontSize: { xs: "1.5rem", md: "2rem" } }}
+                sx={{
+                  fontWeight: 700,
+                  fontSize: { xs: "1.5rem", md: "2rem" },
+                  marginBottom: { xs: 2, md: 0 },
+                }}
               >
                 FRONT END DEVELOPING, <br /> MEDIEINSTITUTET
               </Typography>
             </Grid>
-            <Grid item xs={12} md={5} sx={{ textAlign: "right" }}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              sx={{ textAlign: { xs: "left", md: "right" } }}
+            >
               <Box sx={{ maxWidth: "100%" }}>
                 <Typography
                   variant="body1"
@@ -56,12 +65,21 @@ export default function EducationSection() {
               <Typography
                 variant="h2"
                 component="h2"
-                sx={{ fontWeight: 700, fontSize: { xs: "1.5rem", md: "2rem" } }}
+                sx={{
+                  fontWeight: 700,
+                  fontSize: { xs: "1.5rem", md: "2rem" },
+                  marginBottom: { xs: 2, md: 0 },
+                }}
               >
                 DIGITAL MARKETING & SALES ANALYTICS, <br /> IHM BUSINESS SCHOOL
               </Typography>
             </Grid>
-            <Grid item xs={12} md={5} sx={{ textAlign: "right" }}>
+            <Grid
+              item
+              xs={12}
+              md={5}
+              sx={{ textAlign: { xs: "left", md: "right" } }}
+            >
               <Box sx={{ maxWidth: "100%" }}>
                 <Typography
                   variant="body1"
