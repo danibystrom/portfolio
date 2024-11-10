@@ -82,31 +82,33 @@ export default function Projects() {
               </Link>
             </Grid>
           ))}
-          <Button
-            variant="outlined"
-            sx={{
-              color: "#0A0908",
-              borderColor: "#0A0908",
-              borderRadius: 20,
-              mt: 10,
-              transition: "all 0.3s ease",
-              width: 280,
-              "&:hover": {
-                boxShadow: "8px 8px #e2dccb",
-                transition: "all 0.3s ease",
-                backgroundColor: "#f3f1ea",
-              },
-            }}
-          >
-            <Typography
-              variant="body1"
+          <Link href="https://github.com/danibystrom">
+            <Button
+              variant="outlined"
               sx={{
-                paddingX: "25px",
+                color: "#0A0908",
+                borderColor: "#0A0908",
+                borderRadius: 20,
+                mt: 10,
+                transition: "all 0.3s ease",
+                width: 280,
+                "&:hover": {
+                  boxShadow: "8px 8px #e2dccb",
+                  transition: "all 0.3s ease",
+                  backgroundColor: "#f3f1ea",
+                },
               }}
             >
-              CHECK OUT MY REPOS
-            </Typography>
-          </Button>
+              <Typography
+                variant="body1"
+                sx={{
+                  paddingX: "25px",
+                }}
+              >
+                CHECK OUT MY GITHUB
+              </Typography>
+            </Button>
+          </Link>
 
           <Divider />
         </Grid>
