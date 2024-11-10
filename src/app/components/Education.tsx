@@ -31,7 +31,7 @@ export default function EducationSection() {
             <Grid
               item
               xs={12}
-              md={5}
+              md={6}
               sx={{ textAlign: { xs: "left", md: "right" } }}
             >
               <Box sx={{ maxWidth: "100%" }}>
@@ -42,13 +42,15 @@ export default function EducationSection() {
                     lineHeight: 1.5,
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc
-                  ligula, nec consectetur risus scelerisque et. Aenean feugiat
-                  massa nec laoreet congue. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Nullam pharetra laoreet rhoncus.
-                  Maecenas consectetur nunc ligula, nec consectetur risus
-                  scelerisque et. Aenean feugiat massa nec laoreet congue.
+                  In my Front-End Developer program, I’ve gained expertise in
+                  creating advanced websites using essential web technologies,
+                  including JavaScript/TypeScript, HTML, CSS, and UX/UI
+                  principles. I’ve also trained with modern frameworks such as
+                  React, Vue.js, and Next.js, along with backend technologies
+                  like MongoDB, Express, and Prisma. Through practical projects
+                  and real-world case studies, I’ve developed the skills needed
+                  in today’s industry, working alongside experts to master the
+                  latest tools and agile project management practices.
                 </Typography>
               </Box>
             </Grid>
@@ -77,7 +79,7 @@ export default function EducationSection() {
             <Grid
               item
               xs={12}
-              md={5}
+              md={6}
               sx={{ textAlign: { xs: "left", md: "right" } }}
             >
               <Box sx={{ maxWidth: "100%" }}>
@@ -88,13 +90,17 @@ export default function EducationSection() {
                     lineHeight: 1.5,
                   }}
                 >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc
-                  ligula, nec consectetur risus scelerisque et. Aenean feugiat
-                  massa nec laoreet congue. Lorem ipsum dolor sit amet,
-                  consectetur adipiscing elit. Nullam pharetra laoreet rhoncus.
-                  Maecenas consectetur nunc ligula, nec consectetur risus
-                  scelerisque et. Aenean feugiat massa nec laoreet congue.
+                  In my Digital Marketing & Sales Analytics program, I’ve gained
+                  a strong foundation in digital analytics, CMS, conversion
+                  optimization, and A/B testing. The program covers essential
+                  areas like SEO, content marketing, data-driven marketing,
+                  social media advertising, and data analysis. As a Digital
+                  Analytics Specialist, I am trained to gather, analyze, and
+                  interpret data from digital platforms to identify trends,
+                  troubleshoot issues, and provide data-driven recommendations.
+                  This skill set is vital for helping companies understand their
+                  digital presence and make informed decisions to achieve
+                  business goals.
                 </Typography>
               </Box>
             </Grid>
