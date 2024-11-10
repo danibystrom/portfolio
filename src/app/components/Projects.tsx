@@ -18,6 +18,18 @@ export default function Projects() {
   return (
     <ThemeProvider theme={theme}>
       <Box id="projects" sx={{ backgroundColor: "#f3f1ea", m: 2 }}>
+        <Typography
+          variant="h2"
+          component="h2"
+          sx={{
+            marginBottom: 6,
+            color: "#0A0908",
+            fontSize: "2.2rem",
+            marginX: 1,
+          }}
+        >
+          SOME OF MY FUN PROJECTS
+        </Typography>
         <Grid
           container
           spacing={2}

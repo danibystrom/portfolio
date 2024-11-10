@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
+
 import { Box, Grid, ThemeProvider, Typography } from "@mui/material";
 import theme from "../themes/theme";
 import Divider from "./Divider";
@@ -42,15 +44,16 @@ export default function EducationSection() {
                     lineHeight: 1.5,
                   }}
                 >
-                  In my Front-End Developer program, I’ve gained expertise in
-                  creating advanced websites using essential web technologies,
-                  including JavaScript/TypeScript, HTML, CSS, and UX/UI
-                  principles. I’ve also trained with modern frameworks such as
-                  React, Vue.js, and Next.js, along with backend technologies
-                  like MongoDB, Express, and Prisma. Through practical projects
-                  and real-world case studies, I’ve developed the skills needed
-                  in today’s industry, working alongside experts to master the
-                  latest tools and agile project management practices.
+                  In my Front-End Developer program, I&apos;ve gained expertise
+                  in creating advanced websites using essential web
+                  technologies, including JavaScript/TypeScript, HTML, CSS, and
+                  UX/UI principles. I&apos;ve also trained with modern
+                  frameworks such as React, Vue.js, and Next.js, along with
+                  backend technologies like MongoDB, Express, and Prisma.
+                  Through practical projects and real-world case studies,
+                  I&apos;ve developed the skills needed in today&apos;s
+                  industry, working alongside experts to master the latest tools
+                  and agile project management practices.
                 </Typography>
               </Box>
             </Grid>
@@ -90,13 +93,13 @@ export default function EducationSection() {
                     lineHeight: 1.5,
                   }}
                 >
-                  In my Digital Marketing & Sales Analytics program, I’ve gained
-                  a strong foundation in digital analytics, CMS, conversion
-                  optimization, and A/B testing. The program covers essential
-                  areas like SEO, content marketing, data-driven marketing,
-                  social media advertising, and data analysis. As a Digital
-                  Analytics Specialist, I am trained to gather, analyze, and
-                  interpret data from digital platforms to identify trends,
+                  In my Digital Marketing & Sales Analytics program, I&apos;ve
+                  gained a strong foundation in digital analytics, CMS,
+                  conversion optimization, and A/B testing. The program covers
+                  essential areas like SEO, content marketing, data-driven
+                  marketing, social media advertising, and data analysis. As a
+                  Digital Analytics Specialist, I am trained to gather, analyze,
+                  and interpret data from digital platforms to identify trends,
                   troubleshoot issues, and provide data-driven recommendations.
                   This skill set is vital for helping companies understand their
                   digital presence and make informed decisions to achieve
