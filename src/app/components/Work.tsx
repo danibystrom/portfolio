@@ -40,7 +40,7 @@ export default function ControlledAccordions() {
               marginX: 1,
             }}
           >
-            WHAT I´VE DONE
+            WHAT I&apos;VE DONE
           </Typography>
           <DividerSmall />
           <Accordion
@@ -118,7 +118,7 @@ export default function ControlledAccordions() {
                     ml: 2,
                   }}
                 >
-                  Stretch EVolve, 2024 - 2024
+                  Stretch Evolve, 2024 - 2024
                 </Typography>
               </Box>
             </AccordionSummary>
@@ -220,10 +220,10 @@ export default function ControlledAccordions() {
             <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
               <Typography>
                 I was responsible for updating and tailoring websites to align
-                with the company’s vision and messaging. This included writing,
-                editing, and publishing SEO-optimized content. I also analyzed
-                traffic and user behavior to drive continuous improvements on
-                the website.
+                with the company&apos;s vision and messaging. This included
+                writing, editing, and publishing SEO-optimized content. I also
+                analyzed traffic and user behavior to drive continuous
+                improvements on the website.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -310,14 +310,14 @@ export default function ControlledAccordions() {
             <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
               <Typography>
                 I was responsible for building and customizing the website in
-                alignment with Group Management's guidelines. My focus was on
-                creating inspiring, commercially descriptive, and SEO-optimized
-                content. I conducted thorough analysis to identify opportunities
-                for improving the customer journey and implemented A/B tests to
-                optimize conversions. Through ongoing testing and close
-                collaboration with the paid search and advertising teams, we
-                successfully increased the website's conversion rate from 2.3%
-                to 4.0% between 2020 and 2023.
+                alignment with Group Management&apos;s guidelines. My focus was
+                on creating inspiring, commercially descriptive, and
+                SEO-optimized content. I conducted thorough analysis to identify
+                opportunities for improving the customer journey and implemented
+                A/B tests to optimize conversions. Through ongoing testing and
+                close collaboration with the paid search and advertising teams,
+                we successfully increased the website&apos;s conversion rate
+                from 2.3% to 4.0% between 2020 and 2023.
               </Typography>
             </AccordionDetails>
           </Accordion>

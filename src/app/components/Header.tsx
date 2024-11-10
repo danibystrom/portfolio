@@ -36,11 +36,12 @@ export default function Header() {
                 fontFamily: '"DM Serif Display", serif',
                 fontWeight: 700,
                 fontSize: { xs: "2rem", sm: "2.5rem", md: "6rem" },
-                lineHeight: 1,
+                lineHeight: 0.9,
                 color: "#0A0908",
               }}
             >
-              From Norrlands forests to a visionary web developer.
+              From the dark forests of Norrland to curious web developer in
+              Gothenburg.
             </Typography>
           </Box>
         </Grid>
@@ -62,11 +63,14 @@ export default function Header() {
                 lineHeight: 1.5,
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-              pharetra laoreet rhoncus. Maecenas consectetur nunc ligula, nec
-              consectetur risus scelerisque et. Aenean feugiat massa nec laoreet
-              congue. Duis ut dolor vitae urna tincidunt fringilla et non leo.
-              Pellentesque quis nunc ex.
+              I&apos;m an ambitious, technically skilled individual with a can-do
+              attitude and strong curiosity. My background in Digital Marketing
+              & Sales Analytics and digital analysis has prepared me well for my
+              current path as a Front-End Developer. I&apos;ve gained experience with
+              JavaScript/TypeScript, HTML, CSS, UX/UI, and frameworks like
+              React, Vue.js, and Next.js, as well as backend tools like MongoDB,
+              Express, and Prisma. I&apos;m excited to keep building on these skills
+              in development.
             </Typography>
           </Box>
         </Grid>
