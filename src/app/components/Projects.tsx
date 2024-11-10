@@ -17,7 +17,7 @@ import Divider from "./Divider";
 export default function Projects() {
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: "#f3f1ea", m: 2 }}>
+      <Box id="projects" sx={{ backgroundColor: "#f3f1ea", m: 2 }}>
         <Grid
           container
           spacing={2}

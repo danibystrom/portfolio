@@ -1,5 +1,6 @@
 "use client";
 import { Box, Link, Divider as MuiDivider, Typography } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function Footer() {
   return (
@@ -82,10 +83,15 @@ export default function Footer() {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-          <Typography>ABOUT</Typography>
-          <Typography>PROJECTS</Typography>
-          <Typography>WORK</Typography>
-          <Typography>CONTACT</Typography>
+          <ScrollLink to="me" smooth={true} duration={500} offset={-100}>
+            <Typography>ME</Typography>
+          </ScrollLink>
+          <ScrollLink to="projects" smooth={true} duration={500} offset={-100}>
+            <Typography>PROJECTS</Typography>
+          </ScrollLink>
+          <ScrollLink to="work" smooth={true} duration={500} offset={-100}>
+            <Typography>WORK</Typography>
+          </ScrollLink>
         </Box>
         <Box
           sx={{
@@ -96,10 +102,18 @@ export default function Footer() {
             justifyContent: "flex-end",
           }}
         >
-          <Link href="https://github.com" color="inherit" underline="hover">
+          <Link
+            href="https://github.com/danibystrom"
+            color="inherit"
+            underline="hover"
+          >
             <Typography>GITHUB</Typography>
           </Link>
-          <Link href="https://linkedin.com" color="inherit" underline="hover">
+          <Link
+            href="https://www.linkedin.com/in/daniela-bystrom/"
+            color="inherit"
+            underline="hover"
+          >
             <Typography>LINKEDIN</Typography>
           </Link>
         </Box>
