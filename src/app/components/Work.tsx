@@ -40,7 +40,7 @@ export default function ControlledAccordions() {
               marginX: 1,
             }}
           >
-            WHAT IVE DONE
+            WHAT I´VE DONE
           </Typography>
           <DividerSmall />
           <Accordion
@@ -57,7 +57,7 @@ export default function ControlledAccordions() {
             <AccordionSummary
               sx={{ backgroundColor: "#f3f1ea" }}
               expandIcon={
-                expanded === "panel2" ? (
+                expanded === "panel1" ? (
                   <RemoveSharp
                     sx={{
                       color: "#0A0908",
@@ -85,36 +85,54 @@ export default function ControlledAccordions() {
                   />
                 )
               }
-              aria-controls="panel2bh-content"
-              id="panel2bh-header"
+              aria-controls="panel1bh-content"
+              id="panel1bh-header"
             >
-              <Typography
-                variant="h5"
-                component="h5"
+              <Box
                 sx={{
-                  width: "50%",
-                  flexShrink: 0,
-                  fontWeight: 700,
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  width: "100%",
+                  flexWrap: "wrap",
                 }}
               >
-                DEVELOPER INTERN
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#0A0908",
-                  display: {
-                    xs: expanded === "panel1" ? "block" : "none",
-                    sm: "block",
-                  },
-                }}
-              >
-                Lorem ipsum, 2023 - 2023
-              </Typography>
+                <Typography
+                  variant="h5"
+                  component="h5"
+                  sx={{
+                    width: "auto",
+                    fontWeight: 700,
+                  }}
+                >
+                  DEVELOPER INTERN
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#0A0908",
+                    paddingLeft: 5,
+                    display: {
+                      xs: "none",
+                      sm: "block",
+                    },
+                    ml: 2,
+                  }}
+                >
+                  Stretch EVolve, 2024 - 2024
+                </Typography>
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
               <Typography>
-                Nulla facilisi. Phasellus sollicitudin nulla et quam mattis
-                feugiat. Aliquam eget maximus est, id dignissim quam.
+                During my internship, I was tasked with developing an
+                application for a product configurator. I migrated the project
+                from JavaScript to TypeScript to enhance code stability and
+                maintainability. I also developed and customized business
+                applications within the SAP environment using SAP Fiori and
+                SAPUI5 to improve the user experience. Additionally, I built
+                features tailored to customer-specific needs, prioritizing
+                efficiency and user-friendliness, and tested and implemented
+                solutions in line with SAP standards and best practices.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -165,39 +183,51 @@ export default function ControlledAccordions() {
               aria-controls="panel2bh-content"
               id="panel2bh-header"
             >
-              <Typography
-                variant="h5"
-                component="h5"
+              <Box
                 sx={{
-                  width: "50%",
-                  flexShrink: 0,
-                  fontWeight: 700,
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  width: "100%",
+                  flexWrap: "wrap",
                 }}
               >
-                WEBSITE ADMINISTRATOR
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#0A0908",
-                  display: {
-                    xs: expanded === "panel1" ? "block" : "none",
-                    sm: "block",
-                  },
-                }}
-              >
-                Lorem ipsum, 2023 - 2023
-              </Typography>
+                <Typography
+                  variant="h5"
+                  component="h5"
+                  sx={{
+                    width: "auto",
+                    fontWeight: 700,
+                  }}
+                >
+                  WEBSITE ADMINISTRATOR
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#0A0908",
+                    paddingLeft: 5,
+                    display: {
+                      xs: "none",
+                      sm: "block",
+                    },
+                    ml: 2,
+                  }}
+                >
+                  E-Career, 2023 - 2024
+                </Typography>
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
               <Typography>
-                Donec placerat, lectus sed mattis semper, neque lectus feugiat
-                lectus, varius pulvinar diam eros in elit. Pellentesque
-                convallis laoreet laoreet.
+                I was responsible for updating and tailoring websites to align
+                with the company’s vision and messaging. This included writing,
+                editing, and publishing SEO-optimized content. I also analyzed
+                traffic and user behavior to drive continuous improvements on
+                the website.
               </Typography>
             </AccordionDetails>
           </Accordion>
           <DividerSmall />
-
           <Accordion
             expanded={expanded === "panel3"}
             onChange={handleChange("panel3")}
@@ -210,7 +240,7 @@ export default function ControlledAccordions() {
             }}
           >
             <AccordionSummary
-              sx={{ backgroundColor: "#f3f1ea", color: "#0A0908" }}
+              sx={{ backgroundColor: "#f3f1ea" }}
               expandIcon={
                 expanded === "panel3" ? (
                   <RemoveSharp
@@ -243,116 +273,56 @@ export default function ControlledAccordions() {
               aria-controls="panel3bh-content"
               id="panel3bh-header"
             >
-              <Typography
-                variant="h5"
-                component="h5"
+              <Box
                 sx={{
-                  width: "50%",
-                  flexShrink: 0,
-                  fontWeight: 700,
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  width: "100%",
+                  flexWrap: "wrap",
                 }}
               >
-                WEBSITE ADMINISTRATOR
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#0A0908",
-                  display: {
-                    xs: expanded === "panel1" ? "block" : "none",
-                    sm: "block",
-                  },
-                }}
-              >
-                Lorem ipsum, 2023 - 2023
-              </Typography>
+                <Typography
+                  variant="h5"
+                  component="h5"
+                  sx={{
+                    width: "auto",
+                    fontWeight: 700,
+                  }}
+                >
+                  WEBSITE SPECIALIST
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#0A0908",
+                    paddingLeft: 5,
+                    display: {
+                      xs: "none",
+                      sm: "block",
+                    },
+                    ml: 2,
+                  }}
+                >
+                  Sector Alarm, 2021 - 2023
+                </Typography>
+              </Box>
             </AccordionSummary>
             <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
               <Typography>
-                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-                Integer sit amet egestas eros, vitae egestas augue. Duis vel est
-                augue.
+                I was responsible for building and customizing the website in
+                alignment with Group Management's guidelines. My focus was on
+                creating inspiring, commercially descriptive, and SEO-optimized
+                content. I conducted thorough analysis to identify opportunities
+                for improving the customer journey and implemented A/B tests to
+                optimize conversions. Through ongoing testing and close
+                collaboration with the paid search and advertising teams, we
+                successfully increased the website's conversion rate from 2.3%
+                to 4.0% between 2020 and 2023.
               </Typography>
             </AccordionDetails>
           </Accordion>
           <DividerSmall />
 
-          <Accordion
-            expanded={expanded === "panel4"}
-            onChange={handleChange("panel4")}
-            sx={{
-              border: "none",
-              boxShadow: "none",
-              "&::before": {
-                display: "none",
-              },
-            }}
-          >
-            <AccordionSummary
-              sx={{ backgroundColor: "#f3f1ea" }}
-              expandIcon={
-                expanded === "panel4" ? (
-                  <RemoveSharp
-                    sx={{
-                      color: "#0A0908",
-                      fontSize: "medium",
-                      border: "1px solid #0A0908",
-                      borderRadius: "50%",
-                      padding: "4px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  />
-                ) : (
-                  <AddSharp
-                    sx={{
-                      color: "#0A0908",
-                      fontSize: "medium",
-                      border: "1px solid #0A0908",
-                      borderRadius: "50%",
-                      padding: "4px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  />
-                )
-              }
-              aria-controls="panel4bh-content"
-              id="panel4bh-header"
-            >
-              <Typography
-                variant="h5"
-                component="h5"
-                sx={{
-                  width: "50%",
-                  flexShrink: 0,
-                  fontWeight: 700,
-                }}
-              >
-                WEBSITE SPECIALIST
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#0A0908",
-                  display: {
-                    xs: expanded === "panel1" ? "block" : "none",
-                    sm: "block",
-                  },
-                }}
-              >
-                Lorem ipsum, 2023 - 2023
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{ backgroundColor: "#f3f1ea" }}>
-              <Typography>
-                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
-                Integer sit amet egestas eros, vitae egestas augue. Duis vel est
-                augue.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <DividerSmall />
           <Grid item xs={12} sx={{ display: "flex", justifyContent: "center" }}>
             <Link href="https://www.linkedin.com/in/daniela-bystrom/">
               <Button
