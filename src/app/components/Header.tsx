@@ -13,9 +13,22 @@ import Divider from "./Divider";
 export default function Header() {
   return (
     <ThemeProvider theme={theme}>
-      <Grid container sx={{ height: "auto", backgroundColor: "#f3f1ea" }}>
-        <Grid item xs={12} md={10} sx={{ zIndex: 1, padding: 4 }}>
-          <Box id="me" sx={{ mt: 6 }}>
+      <Grid
+        container
+        sx={{
+          height: "auto",
+          backgroundColor: "#f3f1ea",
+          maxWidth: "100vw",
+          overflowX: "hidden",
+        }}
+      >
+        <Grid
+          item
+          xs={12}
+          md={10}
+          sx={{ zIndex: 1, padding: { xs: 2, md: 4 } }}
+        >
+          <Box id="me" sx={{ mt: { xs: 3, md: 6 } }}>
             <Typography
               variant="h2"
               component="h1"
@@ -32,12 +45,20 @@ export default function Header() {
           </Box>
         </Grid>
 
-        <Grid item xs={12} md={10} sx={{ zIndex: 1, padding: 4 }}>
+        <Grid
+          item
+          xs={12}
+          md={10}
+          sx={{
+            zIndex: 1,
+            padding: { xs: 2, md: 4 },
+          }}
+        >
           <Box>
             <Typography
               variant="body1"
               sx={{
-                fontSize: { xs: "1rem", sm: "1.25rem" },
+                fontSize: { xs: "0.875rem", sm: "1rem", md: "1.25rem" },
                 lineHeight: 1.5,
               }}
             >
@@ -54,10 +75,10 @@ export default function Header() {
           <Card
             sx={{
               width: "90%",
-              maxWidth: "1920px",
+              maxWidth: "100vw",
               height: "auto",
-              marginBottom: 4,
-              marginTop: 5,
+              marginBottom: { xs: 2, md: 4 },
+              marginTop: { xs: 3, md: 5 },
               borderRadius: 10,
             }}
           >
@@ -65,7 +86,7 @@ export default function Header() {
               component="img"
               image="/headerimg.jpg"
               alt="Beskrivning av bilden"
-              sx={{ objectFit: "contain", height: "auto", width: "100%" }}
+              sx={{ objectFit: "cover", height: "auto", width: "100%" }}
             />
           </Card>
         </Grid>
