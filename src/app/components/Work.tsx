@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable react/no-unescaped-entities */
+
 import { AddSharp, RemoveSharp } from "@mui/icons-material";
 import { Box, Button, Grid, Link, ThemeProvider } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
