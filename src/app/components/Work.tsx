@@ -19,7 +19,16 @@ export default function ControlledAccordions() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid item xs={12} sx={{ backgroundColor: "#f3f1ea" }}>
+      <Grid
+        item
+        xs={12}
+        sx={{
+          width: "100%",
+          backgroundColor: "#f3f1ea",
+          margin: 0,
+          padding: 0,
+        }}
+      >
         <Typography
           variant="h2"
           component="h2"
