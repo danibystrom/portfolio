@@ -13,6 +13,7 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
 type PageProps = { params: { slug: string } };
@@ -92,45 +93,60 @@ export default function VideoContainer({ params }: PageProps) {
             </Typography>
           </Box>
         </Grid>
-        <Box
+        <Grid
+          container
+          spacing={2}
           sx={{
-            opacity: isLoaded ? 1 : 0,
-            transition: "opacity 1s ease",
-            height: "100vh",
-            position: "relative",
-            overflow: "hidden",
+            maxWidth: "100%",
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
-            // borderRadius: 10,
-            margin: 2,
-            boxShadow: "0px 4px 10px rgba(226, 220, 203)",
           }}
         >
-          <CardMedia
-            ref={videoRef}
-            component="video"
-            src={project.video}
-            style={{
-              width: "98vw",
-              height: "auto",
-              objectFit: "cover",
-              backgroundColor: "#f3f1ea",
-            }}
-          />
-          <IconButton
+          <Box
             sx={{
-              position: "absolute",
-              bottom: 10,
-              left: "50%",
-              transform: "translateX(-50%)",
-              zIndex: 2,
+              opacity: isLoaded ? 1 : 0,
+              transition: "opacity 1s ease",
+              height: "100%",
+              position: "relative",
+              overflow: "hidden",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              margin: 2,
+              boxShadow: "0px 4px 10px rgba(226, 220, 203)",
+              width: "95%",
+              maxHeight: "calc(100vh - 64px)",
             }}
-            onClick={handleTogglePlay}
           >
-            {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
-          </IconButton>
-        </Box>
+            <CardMedia
+              ref={videoRef}
+              component="video"
+              src={project.video}
+              muted
+              autoPlay
+              loop
+              style={{
+                width: "100%",
+                maxWidth: "100vw",
+                height: "auto",
+                objectFit: "cover",
+                backgroundColor: "#f3f1ea",
+              }}
+            />
+            <IconButton
+              sx={{
+                position: "absolute",
+                bottom: 10,
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 2,
+              }}
+              onClick={handleTogglePlay}
+            >
+              {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
+            </IconButton>
+          </Box>
+        </Grid>
         <Divider />
         <Grid container sx={{ height: "auto" }}>
           <Grid container spacing={4} sx={{ padding: 4 }}>
@@ -199,16 +215,26 @@ export default function VideoContainer({ params }: PageProps) {
                   transition: "all 0.3s ease",
                   backgroundColor: "#f3f1ea",
                 },
+                "&:active": {
+                  backgroundColor: "transparent", // Ta bort aktiv bakgrundsfärg (grått)
+                  boxShadow: "none", // Ta bort boxskuggning vid klick
+                  outline: "none", // Ta bort aktiv ram vid klick
+                },
               }}
             >
-              <Typography
-                variant="body1"
-                sx={{
-                  paddingX: "25px",
-                }}
+              <Link
+                href="https://github.com/danibystrom?tab=repositories"
+                style={{ textDecoration: "none" }}
               >
-                VIEW MY REPO
-              </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    paddingX: "25px",
+                  }}
+                >
+                  VIEW MY REPOS
+                </Typography>
+              </Link>
             </Button>{" "}
           </Grid>
         </Grid>
