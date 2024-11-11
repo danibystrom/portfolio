@@ -84,7 +84,7 @@ export default function Footer() {
       >
         <Box sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
           <ScrollLink to="me" smooth={true} duration={500} offset={-100}>
-            <Typography>ME</Typography>
+            <Typography>HOME</Typography>
           </ScrollLink>
           <ScrollLink to="projects" smooth={true} duration={500} offset={-100}>
             <Typography>PROJECTS</Typography>

@@ -124,7 +124,7 @@ export default function Header() {
                 onClick={() => toggleDrawer(false)}
               >
                 <Typography variant="body1" sx={{ fontSize: "3vh" }}>
-                  ME
+                  HOME
                 </Typography>
               </Button>
             </Link>
