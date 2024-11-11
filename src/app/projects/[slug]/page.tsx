@@ -96,7 +96,7 @@ export default function VideoContainer({ params }: PageProps) {
               {project.pageTitle}
             </Typography>
           </Box>
-          <Box sx={{ mt: 6 }}>
+          <Box sx={{ mt: 4, mb: 4 }}>
             <Typography
               variant="body1"
               sx={{
@@ -121,15 +121,16 @@ export default function VideoContainer({ params }: PageProps) {
             sx={{
               opacity: isLoaded ? 1 : 0,
               transition: "opacity 1s ease",
-              height: "100%",
               position: "relative",
               overflow: "hidden",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              margin: 2,
-              boxShadow: "0px 4px 10px rgba(226, 220, 203)",
+              margin: "auto",
               width: "95%",
+              maxWidth: "100vw",
+              boxShadow: "0px 4px 10px rgba(226, 220, 203)",
+              height: "auto",
               maxHeight: "calc(100vh - 64px)",
             }}
           >
