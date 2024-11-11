@@ -17,7 +17,7 @@ export default function EducationSection() {
               sx={{
                 marginBottom: 6,
                 color: "#0A0908",
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+                fontSize: { xs: "2rem", sm: "2.3rem", md: "4rem" },
               }}
             >
               WHAT I&#39;VE LEARNED
