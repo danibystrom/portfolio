@@ -44,7 +44,7 @@ export const projects: Project[] = [
     slug: "milk-mayham.",
     pageTitle: "Milk Mayham.",
     pageSubtitle:
-      "In this thrilling game, an adventurous baby must navigate a labyrinth within 60 seconds, collecting formula bottles to score points while avoiding beer bottles that cause dangerous spins. Along the way, time-stopping clocks offer a strategic advantage, freezing the countdown for five seconds. To succeed, the baby must reach the exit door before time runs out, or risk the game ending in failure. If successful, the player’s score is revealed, and the choice to continue or restart the challenge arises. Can you guide the baby through the maze, collect the bottles, and conquer the clock?",
+      "In this thrilling game, an adventurous baby must navigate a labyrinth within 60 seconds, collecting formula bottles to score points while avoiding beer bottles that cause dangerous spins. Along the way, time-stopping clocks offer a strategic advantage, freezing the countdown for five seconds. To succeed, the baby must reach the exit door before time runs out, or risk the game ending in failure. If successful, the player&apos;s score is revealed, and the choice to continue or restart the challenge arises. Can you guide the baby through the maze, collect the bottles, and conquer the clock?",
     description:
       "In this fast-paced game, an infant embarks on a mission through a twisting labyrinth, racing against the clock to collect as many formula bottles as possible within 60 seconds. Each formula bottle increases the score, but beware of beer bottles, which can cause the baby to spin uncontrollably. Time-stopping clocks provide a vital advantage, freezing the countdown for a brief period to help rack up points. The ultimate goal is to reach the exit door before time runs out. Succeed, and your score is displayed, giving you the choice to continue or try for a higher score. Built with p5.js and TypeScript using an Object-Oriented Programming approach, this game is designed with custom visuals created in Adobe Photoshop and Figma.",
     video: "/milkmayham-video.mp4",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     slug: "ciliegia",
     pageTitle: "Ciliegia.",
     pageSubtitle:
-      "Ciliegia Grappa is a unique and exquisite cherry-flavored grappa, crafted for those who appreciate fine and distinctive spirits. If you’re interested in learning more about Ciliegia Grappa, simply reach out through our contact form for all the details.",
+      "Ciliegia Grappa is a unique and exquisite cherry-flavored grappa, crafted for those who appreciate fine and distinctive spirits. If you&apos;re interested in learning more about Ciliegia Grappa, simply reach out through our contact form for all the details.",
     description:
       "This project was created as part of an Interface Design course assignment, where the task was to develop a visual identity and then implement it on the web with the goal of designing a cohesive brand experience and integrating it into a fully functional website. Features include a responsive contact form modal for user inquiries, a simple and intuitive UI built with React, TypeScript, and Material UI, and input validation for the name and email fields.",
     video: "/ciliegia-video.mp4",
