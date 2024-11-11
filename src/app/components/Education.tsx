@@ -10,6 +10,20 @@ export default function EducationSection() {
     <ThemeProvider theme={theme}>
       <Grid container sx={{ height: "auto", backgroundColor: "#f3f1ea" }}>
         <Grid container spacing={4} sx={{ padding: 4 }}>
+          <Grid item xs={12}>
+            <Typography
+              variant="h2"
+              component="h2"
+              sx={{
+                marginBottom: 6,
+                color: "#0A0908",
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+              }}
+            >
+              WHAT I&#39;VE LEARNED
+            </Typography>
+          </Grid>
+
           <Grid
             container
             item

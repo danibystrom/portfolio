@@ -24,7 +24,7 @@ export default function Projects() {
           sx={{
             marginBottom: 6,
             color: "#0A0908",
-            fontSize: "2.2rem",
+            fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
             marginX: 1,
           }}
         >
