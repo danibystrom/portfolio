@@ -133,33 +133,50 @@ export default function VideoContainer({ params }: PageProps) {
               maxHeight: "calc(100vh - 64px)",
             }}
           >
-            <CardMedia
-              ref={videoRef}
-              component="video"
-              src={isMobile ? project.mobileVideo : project.video}
-              muted
-              autoPlay
-              loop
-              style={{
-                width: "100%",
-                maxWidth: "100vw",
-                height: "auto",
-                objectFit: "cover",
-                backgroundColor: "#f3f1ea",
-              }}
-            />
-            <IconButton
-              sx={{
-                position: "absolute",
-                bottom: 10,
-                left: "50%",
-                transform: "translateX(-50%)",
-                zIndex: 2,
-              }}
-              onClick={handleTogglePlay}
-            >
-              {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
-            </IconButton>
+            {isMobile ? (
+              <CardMedia
+                component="img"
+                src={project.mobileImage}
+                alt="Project Image"
+                sx={{
+                  width: "100%",
+                  maxWidth: "100vw",
+                  height: "auto",
+                  objectFit: "cover",
+                  backgroundColor: "#f3f1ea",
+                }}
+              />
+            ) : (
+              <CardMedia
+                ref={videoRef}
+                component="video"
+                src={project.video}
+                muted
+                autoPlay
+                loop
+                style={{
+                  width: "100%",
+                  maxWidth: "100vw",
+                  height: "auto",
+                  objectFit: "cover",
+                  backgroundColor: "#f3f1ea",
+                }}
+              />
+            )}
+            {!isMobile && (
+              <IconButton
+                sx={{
+                  position: "absolute",
+                  bottom: 10,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  zIndex: 2,
+                }}
+                onClick={handleTogglePlay}
+              >
+                {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
+              </IconButton>
+            )}
           </Box>
         </Grid>
         <Divider />
