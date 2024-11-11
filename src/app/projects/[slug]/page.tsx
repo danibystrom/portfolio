@@ -25,6 +25,21 @@ export default function VideoContainer({ params }: PageProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  const updateScreenSize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateScreenSize);
+
+    updateScreenSize();
+
+    return () => {
+      window.removeEventListener("resize", updateScreenSize);
+    };
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -121,7 +136,7 @@ export default function VideoContainer({ params }: PageProps) {
             <CardMedia
               ref={videoRef}
               component="video"
-              src={project.video}
+              src={isMobile ? project.mobileVideo : project.video}
               muted
               autoPlay
               loop
@@ -164,12 +179,18 @@ export default function VideoContainer({ params }: PageProps) {
                   sx={{
                     fontWeight: 700,
                     fontSize: { xs: "1.5rem", md: "2rem" },
+                    marginBottom: { xs: 2, md: 0 },
                   }}
                 >
                   ABOUT THE PROJECT
                 </Typography>
               </Grid>
-              <Grid item xs={12} md={8} sx={{ textAlign: "right" }}>
+              <Grid
+                item
+                xs={12}
+                md={8}
+                sx={{ textAlign: { xs: "left", md: "right" } }}
+              >
                 <Box sx={{ maxWidth: "100%" }}>
                   <Typography
                     variant="body1"
@@ -178,14 +199,7 @@ export default function VideoContainer({ params }: PageProps) {
                       lineHeight: 1.5,
                     }}
                   >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam pharetra laoreet rhoncus. Maecenas consectetur nunc
-                    ligula, nec consectetur risus scelerisque et. Aenean feugiat
-                    massa nec laoreet congue. Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit. Nullam pharetra laoreet
-                    rhoncus. Maecenas consectetur nunc ligula, nec consectetur
-                    risus scelerisque et. Aenean feugiat massa nec laoreet
-                    congue.
+                    {project.description}
                   </Typography>
                 </Box>
               </Grid>
@@ -216,9 +230,9 @@ export default function VideoContainer({ params }: PageProps) {
                   backgroundColor: "#f3f1ea",
                 },
                 "&:active": {
-                  backgroundColor: "transparent", // Ta bort aktiv bakgrundsfärg (grått)
-                  boxShadow: "none", // Ta bort boxskuggning vid klick
-                  outline: "none", // Ta bort aktiv ram vid klick
+                  backgroundColor: "transparent",
+                  boxShadow: "none",
+                  outline: "none",
                 },
               }}
             >

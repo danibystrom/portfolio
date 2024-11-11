@@ -59,7 +59,7 @@ export default function Header() {
                 <Link href="/">
                   <Button color="inherit" sx={buttonStyle}>
                     <Typography variant="body1" sx={{ fontSize: "3vh" }}>
-                      ME
+                      HOME
                     </Typography>
                   </Button>
                 </Link>
