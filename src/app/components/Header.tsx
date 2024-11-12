@@ -28,7 +28,7 @@ export default function Header() {
           md={10}
           sx={{ zIndex: 1, padding: { xs: 2, md: 4 } }}
         >
-          <Box id="me" sx={{ mt: { xs: 3, md: 6 } }}>
+          <Box id="me" sx={{ mt: { xs: 2, md: 6 } }}>
             <Typography
               variant="h2"
               component="h1"
@@ -63,14 +63,14 @@ export default function Header() {
                 lineHeight: 1.5,
               }}
             >
-              I&apos;m an ambitious, technically skilled individual with a can-do
-              attitude and strong curiosity. My background in Digital Marketing
-              & Sales Analytics and digital analysis has prepared me well for my
-              current path as a Front-End Developer. I&apos;ve gained experience with
-              JavaScript/TypeScript, HTML, CSS, UX/UI, and frameworks like
-              React, Vue.js, and Next.js, as well as backend tools like MongoDB,
-              Express, and Prisma. I&apos;m excited to keep building on these skills
-              in development.
+              I&apos;m an ambitious, technically skilled individual with a
+              can-do attitude and strong curiosity. My background in Digital
+              Marketing & Sales Analytics and digital analysis has prepared me
+              well for my current path as a Front-End Developer. I&apos;ve
+              gained experience with JavaScript/TypeScript, HTML, CSS, UX/UI,
+              and frameworks like React, Vue.js, and Next.js, as well as backend
+              tools like MongoDB, Express, and Prisma. I&apos;m excited to keep
+              building on these skills in development.
             </Typography>
           </Box>
         </Grid>

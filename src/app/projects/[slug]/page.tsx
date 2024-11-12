@@ -14,60 +14,20 @@ export default function VideoContainer({ params }: PageProps) {
   const slug = decodeURIComponent(urlslug);
   const project = projects.find((project) => project.slug.toString() === slug);
   const videoRef = useRef<HTMLVideoElement>(null);
-  // const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [isVideoVisible, setIsVideoVisible] = useState<boolean>(!isMobile);
-
-  const updateScreenSize = () => {
-    setIsMobile(window.innerWidth < 768);
-  };
-
-  const handleToggleVideoVisibility = () => {
-    setIsVideoVisible((prevVisible) => !prevVisible);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateScreenSize);
-
-    updateScreenSize();
-
-    return () => {
-      window.removeEventListener("resize", updateScreenSize);
-    };
-  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
       video.autoplay = true;
       video.loop = true;
-      const playPromise = video.play();
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            // setIsPlaying(true);
-            setIsLoaded(true);
-          })
-          .catch(() => {
-            // setIsPlaying(false);
-          });
-      }
+      video.muted = true;
+      video
+        .play()
+        .then(() => setIsLoaded(true))
+        .catch(() => setIsLoaded(false));
     }
   }, []);
-
-  // const handleTogglePlay = () => {
-  //   const video = videoRef.current;
-  //   if (video) {
-  //     if (isPlaying) {
-  //       video.pause();
-  //     } else {
-  //       video.play();
-  //     }
-  //     setIsPlaying((prevPlaying) => !prevPlaying);
-  //   }
-  // };
 
   if (!project) {
     return <div>Project not found</div>;
@@ -77,7 +37,7 @@ export default function VideoContainer({ params }: PageProps) {
     <ThemeProvider theme={theme}>
       <Grid sx={{ backgroundColor: "#f3f1ea" }}>
         <Grid item xs={12} md={9} sx={{ zIndex: 1, padding: 2 }}>
-          <Box sx={{ mt: 6 }}>
+          <Box sx={{ mt: { sm: 2, md: 6 } }}>
             <Typography
               variant="h2"
               component="h1"
@@ -130,38 +90,21 @@ export default function VideoContainer({ params }: PageProps) {
               maxHeight: "calc(100vh - 64px)",
             }}
           >
-            {isMobile && !isVideoVisible ? (
-              <Button
-                onClick={handleToggleVideoVisibility}
-                sx={{
-                  color: "black",
-                  fontSize: "1.25rem",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  backgroundColor: "transparent",
-                  "&:hover": { backgroundColor: "transparent" },
-                }}
-              >
-                Play Video
-              </Button>
-            ) : (
-              <CardMedia
-                ref={videoRef}
-                component="video"
-                src={project.video}
-                muted
-                autoPlay
-                loop
-                style={{
-                  width: "100%",
-                  maxWidth: "100vw",
-                  height: "auto",
-                  objectFit: "cover",
-                  backgroundColor: "#f3f1ea",
-                  display: isVideoVisible ? "block" : "none",
-                }}
-              />
-            )}
+            <CardMedia
+              ref={videoRef}
+              component="video"
+              src={project.video}
+              muted
+              autoPlay
+              loop
+              style={{
+                width: "100%",
+                maxWidth: "100vw",
+                height: "auto",
+                objectFit: "cover",
+                backgroundColor: "#f3f1ea",
+              }}
+            />
           </Box>
         </Grid>
         <Divider />

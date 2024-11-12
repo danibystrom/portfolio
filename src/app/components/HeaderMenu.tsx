@@ -58,7 +58,10 @@ export default function Header() {
               <>
                 <Link href="/">
                   <Button color="inherit" sx={buttonStyle}>
-                    <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{ fontSize: { xs: "1vh", sm: "1.5vh", md: "3vh" } }}
+                    >
                       HOME
                     </Typography>
                   </Button>
@@ -70,7 +73,10 @@ export default function Header() {
                   offset={-100}
                 >
                   <Button color="inherit" sx={buttonStyle}>
-                    <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{ fontSize: { xs: "1vh", sm: "1.5vh", md: "3vh" } }}
+                    >
                       PROJECTS
                     </Typography>
                   </Button>
@@ -83,7 +89,10 @@ export default function Header() {
                   offset={-100}
                 >
                   <Button color="inherit" sx={buttonStyle}>
-                    <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{ fontSize: { xs: "1vh", sm: "1.5vh", md: "3vh" } }}
+                    >
                       WORK
                     </Typography>
                   </Button>
@@ -91,7 +100,10 @@ export default function Header() {
 
                 <Link href="https://www.linkedin.com/in/daniela-bystrom/">
                   <Button color="inherit" sx={buttonStyle}>
-                    <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                    <Typography
+                      variant="body1"
+                      sx={{ fontSize: { xs: "1vh", sm: "1.5vh", md: "3vh" } }}
+                    >
                       LINKEDIN
                     </Typography>
                   </Button>
@@ -123,7 +135,13 @@ export default function Header() {
                 sx={buttonStyle}
                 onClick={() => toggleDrawer(false)}
               >
-                <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: { xs: "1.5vh", sm: "2vh" },
+                    textAlign: "left",
+                  }}
+                >
                   HOME
                 </Typography>
               </Button>
@@ -139,7 +157,13 @@ export default function Header() {
                 sx={buttonStyle}
                 onClick={() => toggleDrawer(false)}
               >
-                <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: { xs: "1.5vh", sm: "2vh" },
+                    textAlign: "left",
+                  }}
+                >
                   PROJECTS
                 </Typography>
               </Button>
@@ -150,7 +174,13 @@ export default function Header() {
                 sx={buttonStyle}
                 onClick={() => toggleDrawer(false)}
               >
-                <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: { xs: "1.5vh", sm: "2vh" },
+                    textAlign: "left",
+                  }}
+                >
                   WORK
                 </Typography>
               </Button>
@@ -161,7 +191,13 @@ export default function Header() {
                 sx={buttonStyle}
                 onClick={() => toggleDrawer(false)}
               >
-                <Typography variant="body1" sx={{ fontSize: "3vh" }}>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    fontSize: { xs: "1.5vh", sm: "2vh" },
+                    textAlign: "left",
+                  }}
+                >
                   LINKEDIN
                 </Typography>
               </Button>
