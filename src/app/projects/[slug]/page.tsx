@@ -3,16 +3,7 @@ import Divider from "@/app/components/Divider";
 import { projects } from "@/app/data/projects";
 import theme from "@/app/themes/theme";
 import { ThemeProvider } from "@emotion/react";
-import PauseIcon from "@mui/icons-material/Pause";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import {
-  Box,
-  Button,
-  CardMedia,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, Button, CardMedia, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -23,12 +14,17 @@ export default function VideoContainer({ params }: PageProps) {
   const slug = decodeURIComponent(urlslug);
   const project = projects.find((project) => project.slug.toString() === slug);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  // const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [isVideoVisible, setIsVideoVisible] = useState<boolean>(!isMobile);
 
   const updateScreenSize = () => {
     setIsMobile(window.innerWidth < 768);
+  };
+
+  const handleToggleVideoVisibility = () => {
+    setIsVideoVisible((prevVisible) => !prevVisible);
   };
 
   useEffect(() => {
@@ -51,27 +47,27 @@ export default function VideoContainer({ params }: PageProps) {
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            setIsPlaying(true);
+            // setIsPlaying(true);
             setIsLoaded(true);
           })
           .catch(() => {
-            setIsPlaying(false);
+            // setIsPlaying(false);
           });
       }
     }
   }, []);
 
-  const handleTogglePlay = () => {
-    const video = videoRef.current;
-    if (video) {
-      if (isPlaying) {
-        video.pause();
-      } else {
-        video.play();
-      }
-      setIsPlaying((prevPlaying) => !prevPlaying);
-    }
-  };
+  // const handleTogglePlay = () => {
+  //   const video = videoRef.current;
+  //   if (video) {
+  //     if (isPlaying) {
+  //       video.pause();
+  //     } else {
+  //       video.play();
+  //     }
+  //     setIsPlaying((prevPlaying) => !prevPlaying);
+  //   }
+  // };
 
   if (!project) {
     return <div>Project not found</div>;
@@ -110,7 +106,6 @@ export default function VideoContainer({ params }: PageProps) {
         </Grid>
         <Grid
           container
-          spacing={2}
           sx={{
             maxWidth: "100%",
             display: "flex",
@@ -130,23 +125,25 @@ export default function VideoContainer({ params }: PageProps) {
               width: "95%",
               maxWidth: "100vw",
               boxShadow: "0px 4px 10px rgba(226, 220, 203)",
+              borderRadius: 2,
               height: "auto",
               maxHeight: "calc(100vh - 64px)",
             }}
           >
-            {isMobile ? (
-              <CardMedia
-                component="img"
-                src={project.mobileImage}
-                alt="Project Image"
+            {isMobile && !isVideoVisible ? (
+              <Button
+                onClick={handleToggleVideoVisibility}
                 sx={{
-                  width: "100%",
-                  maxWidth: "100vw",
-                  height: "auto",
-                  objectFit: "cover",
-                  backgroundColor: "#f3f1ea",
+                  color: "black",
+                  fontSize: "1.25rem",
+                  fontWeight: "bold",
+                  cursor: "pointer",
+                  backgroundColor: "transparent",
+                  "&:hover": { backgroundColor: "transparent" },
                 }}
-              />
+              >
+                Play Video
+              </Button>
             ) : (
               <CardMedia
                 ref={videoRef}
@@ -161,22 +158,9 @@ export default function VideoContainer({ params }: PageProps) {
                   height: "auto",
                   objectFit: "cover",
                   backgroundColor: "#f3f1ea",
+                  display: isVideoVisible ? "block" : "none",
                 }}
               />
-            )}
-            {!isMobile && (
-              <IconButton
-                sx={{
-                  position: "absolute",
-                  bottom: 10,
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  zIndex: 2,
-                }}
-                onClick={handleTogglePlay}
-              >
-                {isPlaying ? <PauseIcon /> : <PlayArrowIcon />}
-              </IconButton>
             )}
           </Box>
         </Grid>
